@@ -52,6 +52,7 @@ const openMenu = function () {
   menuOpenBtn.style.display = "none";
   menuCloseBtn.style.display = "block";
   menu.style.height = "100vh";
+  menu.style.paddingTop = "35px";
   menu.style.transition = "0.35s ease-in-out";
   menuLink.forEach((e) => {
     e.style.display = "block";
