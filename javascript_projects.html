@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/stylejsp.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -19,6 +20,7 @@
     <title>JavaScript Projects - Supreme Khadka</title>
   </head>
   <body>
+    <div id="preloader"></div>
     <header id="header">
       <div id="nav_bar">
         <div class="name_and_logo">
@@ -33,11 +35,25 @@
           <p>Exit to Home</p>
         </a>
         <a class="header_exit_icon_button" href="index.html">
-          <box-icon color="#f5f6f7" size="35px" name="arrow-to-left"></box-icon>
+          <box-icon
+            color="#f5f6f7"
+            style="margin-top: 5px"
+            size="30px"
+            name="arrow-to-left"
+          ></box-icon>
         </a>
       </div>
     </header>
+    <section id="project_gallery">
+      <div class="container">
+        <div class="rectangle project_gallery_rectangle"></div>
+        <div class="rectangle project_gallery_rectangle"></div>
+        <div class="rectangle project_gallery_rectangle"></div>
+        <div class="rectangle project_gallery_rectangle"></div>
+      </div>
+    </section>
 
+    <script src="js/script.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </body>
 </html>
