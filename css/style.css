@@ -835,9 +835,9 @@ form textarea {
   }
 
   #home .intro .intro_text h2 {
-    text-align: start;
+    text-align: center;
     font-size: 2.9rem !important;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   #works .rectangle {
