@@ -789,6 +789,10 @@ form textarea {
 }
 
 @media only screen and (max-width: 599px) {
+  *:hover {
+    all: none;
+  }
+
   header {
     height: 60px !important;
   }
