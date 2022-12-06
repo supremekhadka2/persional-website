@@ -1,14 +1,14 @@
 particlesJS("bg", {
   particles: {
     number: {
-      value: 80,
+      value: 40,
       density: {
         enable: true,
         value_area: 800,
       },
     },
     color: {
-      value: "#ffffff",
+      value: "#f5f6f7",
     },
     shape: {
       type: "circle",
@@ -26,13 +26,13 @@ particlesJS("bg", {
       },
     },
     opacity: {
-      value: 0,
-      random: false,
+      value: 0.8,
+      random: true,
       anim: {
-        enable: false,
+        enable: true,
         speed: 1,
         opacity_min: 0.1,
-        sync: false,
+        sync: true,
       },
     },
     size: {
@@ -49,7 +49,7 @@ particlesJS("bg", {
       enable: true,
       distance: 150,
       color: "#ffffff",
-      opacity: 0.4,
+      opacity: 0,
       width: 1,
     },
     move: {

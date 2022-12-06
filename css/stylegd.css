@@ -8,7 +8,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 0px;
   height: 100vh;
   width: 100%;
   gap: 0;
@@ -28,4 +28,37 @@ body {
   transition: 0.2s ease-in-out;
   box-shadow: inset 0 0px 0px 0px #000;
   border: 0px solid #f5f6f7;
+}
+
+@media only screen and (max-width: 767px) {
+  #portfolio {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+    height: 100vh;
+    width: 100%;
+    gap: 0;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .rectangle {
+    background-size: cover;
+    background-color: #1b1b1b;
+    border-radius: 15px;
+    height: 200px !important;
+    background-color: #f5f6f7;
+    width: 325px !important;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+    box-shadow: inset 0 0px 0px 0px #000;
+    border: 0px solid #f5f6f7;
+  }
 }

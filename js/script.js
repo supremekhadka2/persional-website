@@ -74,11 +74,13 @@ const closeMenu = function () {
   });
 };
 
-menuOpenBtn.addEventListener("click", openMenu);
-menuCloseBtn.addEventListener("click", closeMenu);
-menuLink.forEach((e) => {
-  e.addEventListener("click", closeMenu);
-});
+if (menuOpenBtn) {
+  menuOpenBtn.addEventListener("click", openMenu);
+  menuCloseBtn.addEventListener("click", closeMenu);
+  menuLink.forEach((e) => {
+    e.addEventListener("click", closeMenu);
+  });
+}
 
 //PRELOADER
 const preloader = document.getElementById("preloader");

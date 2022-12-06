@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clock - JS Project - Supreme Khadka</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="preloader"></div>
+
+    <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+
+    <style>
+      html {
+        background-color: #2d3436;
+        background-image: linear-gradient(315deg, #1a1e1f 0%, #000000 60%);
+        background-size: cover;
+        font-family: "helvetica neue";
+        text-align: center;
+        font-size: 10px;
+      }
+
+      #preloader {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        z-index: 10000;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #2d3436;
+        background-image: linear-gradient(315deg, #1a1e1f 0%, #000000 60%);
+      }
+
+      #preloader::after {
+        content: "";
+        background-image: url("/assets/images/logo.png");
+        background-size: cover;
+
+        background-attachment: fixed;
+        height: 8vh;
+        width: 8vh;
+        position: absolute;
+        background-color: #f5f6f700;
+        border-radius: 50%;
+
+        animation-name: preloader;
+        animation-duration: 2.5s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes preloader {
+        100% {
+          transform: rotate(720deg);
+        }
+      }
+
+      body {
+        margin: 0;
+        font-size: 2rem;
+        display: flex;
+        flex: 1;
+        min-height: 100vh;
+        align-items: center;
+      }
+
+      .clock {
+        width: 30rem;
+        height: 30rem;
+        border: 20px solid white;
+        border-radius: 50%;
+        margin: 50px auto;
+        position: relative;
+        padding: 2rem;
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+          inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .clock-face {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(
+          -3px
+        ); /* account for the height of the clock hands */
+      }
+
+      .hand {
+        width: 50%;
+        height: 6px;
+        border-radius: 2rem;
+        background: #f5f6f7;
+        position: absolute;
+        top: 50%;
+        transform: rotate(90deg);
+        transform-origin: 100%;
+        transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+      }
+
+      .min-hand {
+        height: 4px;
+        width: 50%;
+        background: #ffffff;
+      }
+
+      .second-hand {
+        height: 2px;
+        background: #ffffff;
+      }
+    </style>
+
+    <script src="script.js"></script>
+    <script>
+      const secondHand = document.querySelector(".second-hand");
+      const minsHand = document.querySelector(".min-hand");
+      const hoursHand = document.querySelector(".hour-hand");
+      function setDate() {
+        const now = new Date();
+        const seconds = now.getSeconds();
+        const secondsDegrees = (seconds / 60) * 360 + 90;
+        secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+        const mins = now.getMinutes();
+        const minsDegrees = (mins / 60) * 360 + 90;
+        minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+        const hours = now.getHours();
+        const hoursDegrees = (hours / 12) * 360 + 90;
+        hoursHand.style.transform = `rotate(${hoursDegrees}deg)`;
+      }
+
+      setInterval(setDate, 1000);
+    </script>
+  </body>
+</html>
